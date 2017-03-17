@@ -5,8 +5,7 @@ namespace Domain\Repository;
 use Carbon\Carbon;
 use Domain\Entity\Customer;
 use Domain\Factory\CustomerFactory;
-use Domain\ValueObject\Email;
-use Infra\Db;
+use App\Db;
 
 class Customers
 {

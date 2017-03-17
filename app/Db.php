@@ -1,6 +1,6 @@
 <?php
 
-namespace Infra;
+namespace App;
 
 use Medoo\Medoo;
 
