@@ -20,6 +20,9 @@ class InvalidateController
         $this->invalidate = $invalidate;
     }
 
+    /**
+     * @return array
+     */
     public function index()
     {
         return [
