@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers\Customers;
 
-use Domain\Service\Customer\InvalidateOld;
+use Domain\Service\Customer\Invalidate;
 
 class InvalidateController
 {
     /**
-     * @var InvalidateOld
+     * @var Invalidate
      */
     private $invalidate;
 
     /**
      * InvalidateController constructor.
-     * @param InvalidateOld $invalidate
+     * @param Invalidate $invalidate
      */
-    public function __construct(InvalidateOld $invalidate)
+    public function __construct(Invalidate $invalidate)
     {
         $this->invalidate = $invalidate;
     }

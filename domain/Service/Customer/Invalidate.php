@@ -5,7 +5,7 @@ namespace Domain\Service\Customer;
 use Carbon\Carbon;
 use Domain\Repository\Customers;
 
-class InvalidateOld
+class Invalidate
 {
     /**
      * @var Customers
