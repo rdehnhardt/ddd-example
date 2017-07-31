@@ -2,11 +2,16 @@
 
 namespace Domain\Repository;
 
+use App\Db;
 use Carbon\Carbon;
 use Domain\Entity\Customer;
 use Domain\Factory\CustomerFactory;
-use App\Db;
+use InvalidArgumentException;
 
+/**
+ * Class Customers
+ * @package Domain\Repository
+ */
 class Customers
 {
     /**
@@ -59,8 +64,8 @@ class Customers
 
     /**
      * @param Carbon $date
-     * @return array
-     * @throws \InvalidArgumentException
+     * @return Customer[]
+     * @throws InvalidArgumentException
      */
     public function getFromLastAccess(Carbon $date)
     {
@@ -71,7 +76,7 @@ class Customers
 
     /**
      * @return array
-     * @throws \InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     public function getActivated()
     {
@@ -80,4 +85,3 @@ class Customers
         return CustomerFactory::createFromCollection($data);
     }
 }
-

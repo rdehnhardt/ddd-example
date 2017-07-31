@@ -2,10 +2,15 @@
 
 namespace App\Providers;
 
+use InvalidArgumentException;
 use League\Container\ServiceProvider\AbstractServiceProvider;
 use League\Container\ServiceProvider\BootableServiceProviderInterface;
 use Zend\Diactoros\Response;
 
+/**
+ * Class ResponseServiceProvider
+ * @package App\Providers
+ */
 class ResponseServiceProvider extends AbstractServiceProvider implements BootableServiceProviderInterface
 {
     /**
@@ -13,7 +18,7 @@ class ResponseServiceProvider extends AbstractServiceProvider implements Bootabl
      * this interface. Provides ability for eager loading of Service Providers.
      *
      * @return void
-     * @throws \InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     public function boot()
     {

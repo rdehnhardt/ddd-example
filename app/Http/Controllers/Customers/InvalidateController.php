@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Customers;
 
 use Domain\Service\Customer\Invalidate;
 
+/**
+ * Class InvalidateController
+ * @package App\Http\Controllers\Customers
+ */
 class InvalidateController
 {
     /**

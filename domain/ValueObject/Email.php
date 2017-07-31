@@ -2,6 +2,12 @@
 
 namespace Domain\ValueObject;
 
+use InvalidArgumentException;
+
+/**
+ * Class Email
+ * @package Domain\ValueObject
+ */
 final class Email
 {
     /**
@@ -12,12 +18,12 @@ final class Email
     /**
      * Email constructor.
      * @param string $value
-     * @throws \InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     public function __construct(string $value)
     {
         if (filter_var($value, FILTER_VALIDATE_EMAIL) === false) {
-            throw new \InvalidArgumentException('This is not a valid email address.');
+            throw new InvalidArgumentException('This is not a valid email address.');
         }
 
         $this->value = $value;

@@ -5,30 +5,34 @@ namespace Domain\Entity;
 use Carbon\Carbon;
 use Domain\ValueObject\Email;
 
+/**
+ * Class Customer
+ * @package Domain\Entity
+ */
 class Customer
 {
     /**
-     * @var int
+     * @var int $id
      */
     private $id;
 
     /**
-     * @var string
+     * @var string $name
      */
     private $name;
 
     /**
-     * @var Email
+     * @var Email $email
      */
     private $email;
 
     /**
-     * @var bool
+     * @var bool $active
      */
     private $active;
 
     /**
-     * @var Carbon
+     * @var Carbon $last_access
      */
     private $last_access;
 

@@ -6,7 +6,12 @@ use League\Container\Container;
 use League\Container\ReflectionContainer;
 use League\Route\RouteCollection;
 use League\Route\Strategy\JsonStrategy;
+use Psr\Container\ContainerExceptionInterface;
 
+/**
+ * Class Application
+ * @package App
+ */
 class Application extends Container
 {
     /**
@@ -19,7 +24,7 @@ class Application extends Container
      * @param null $providers
      * @param null $inflectors
      * @param null $definitionFactory
-     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws ContainerExceptionInterface
      */
     public function __construct($providers = null, $inflectors = null, $definitionFactory = null)
     {
@@ -52,7 +57,7 @@ class Application extends Container
 
     /**
      * Map application routes
-     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws ContainerExceptionInterface
      */
     private function registerRoutes()
     {
@@ -68,8 +73,7 @@ class Application extends Container
     /**
      * Run the application
      *
-     * @return mixed
-     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws ContainerExceptionInterface
      */
     public function run()
     {
