@@ -3,10 +3,14 @@
 namespace App\Providers;
 
 use App\Db;
-use dibi;
+use InvalidArgumentException;
 use League\Container\ServiceProvider\AbstractServiceProvider;
 use League\Container\ServiceProvider\BootableServiceProviderInterface;
 
+/**
+ * Class DatabaseServiceProvider
+ * @package App\Providers
+ */
 class DatabaseServiceProvider extends AbstractServiceProvider implements BootableServiceProviderInterface
 {
     /**
@@ -14,7 +18,7 @@ class DatabaseServiceProvider extends AbstractServiceProvider implements Bootabl
      * this interface. Provides ability for eager loading of Service Providers.
      *
      * @return void
-     * @throws \InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     public function boot()
     {

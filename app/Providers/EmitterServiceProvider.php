@@ -2,10 +2,15 @@
 
 namespace App\Providers;
 
+use InvalidArgumentException;
 use League\Container\ServiceProvider\AbstractServiceProvider;
 use League\Container\ServiceProvider\BootableServiceProviderInterface;
 use Zend\Diactoros\Response\SapiEmitter;
 
+/**
+ * Class EmitterServiceProvider
+ * @package App\Providers
+ */
 class EmitterServiceProvider extends AbstractServiceProvider implements BootableServiceProviderInterface
 {
     /**
@@ -13,7 +18,7 @@ class EmitterServiceProvider extends AbstractServiceProvider implements Bootable
      * this interface. Provides ability for eager loading of Service Providers.
      *
      * @return void
-     * @throws \InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     public function boot()
     {

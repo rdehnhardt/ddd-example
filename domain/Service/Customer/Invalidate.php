@@ -4,7 +4,12 @@ namespace Domain\Service\Customer;
 
 use Carbon\Carbon;
 use Domain\Repository\Customers;
+use Exception;
 
+/**
+ * Class Invalidate
+ * @package Domain\Service\Customer
+ */
 class Invalidate
 {
     /**
@@ -36,7 +41,7 @@ class Invalidate
             }
 
             return true;
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return false;
         }
     }

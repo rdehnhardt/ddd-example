@@ -5,15 +5,20 @@ namespace Domain\Factory;
 use Carbon\Carbon;
 use Domain\Entity\Customer;
 use Domain\ValueObject\Email;
+use InvalidArgumentException;
 
+/**
+ * Class CustomerFactory
+ * @package Domain\Factory
+ */
 class CustomerFactory
 {
     /**
      * @param array $params
      * @return Customer
-     * @throws \InvalidArgumentException
+     * @throws InvalidArgumentException
      */
-    static public function createFromArray(array $params)
+    public static function createFromArray(array $params)
     {
         $customer = new Customer();
         $customer->setId($params['id']);
@@ -27,9 +32,10 @@ class CustomerFactory
 
     /**
      * @param array $records
-     * @return array
+     * @throws InvalidArgumentException
+     * @return Customer[]
      */
-    static public function createFromCollection(array $records)
+    public static function createFromCollection(array $records)
     {
         $output = [];
 
