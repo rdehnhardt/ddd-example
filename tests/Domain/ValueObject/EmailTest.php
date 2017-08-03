@@ -8,9 +8,9 @@
 
 namespace Tests\Domain\ValueObject;
 
+use Domain\ValueObject\Email;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use Domain\ValueObject\Email;
 
 class EmailTest extends TestCase
 {
@@ -52,4 +52,3 @@ class EmailTest extends TestCase
         ];
     }
 }
-
