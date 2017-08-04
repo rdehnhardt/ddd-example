@@ -13,8 +13,10 @@ use PHPUnit\Framework\TestCase;
 
 class CustomerTest extends TestCase
 {
-    public function testIsSomething()
+    public function testBasic()
     {
-        $this->assertEquals(true, true);
+        $customer = new Customer();
+        $customer->setId(1);
+        $this->assertEquals(1, $customer->getId());
     }
 }
